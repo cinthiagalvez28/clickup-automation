@@ -39,14 +39,14 @@ TODOIST-AUTOMATION/
 ├── tests/                          # Test scripts organized by modules
 │   ├── api/
 │   │   ├── spaces/
-│   │   │   └── spaces.api.spec.js
+│   │   │   └── spaces.api.spec.ts
 │   │   └── tasks/
-│   │       └── tasks.api.spec.js
+│   │       └── tasks.api.spec.ts
 │   └── ui/
 │       ├── cards/
-│       │   └── cards.spec.js
+│       │   └── cards.spec.ts
 │       └── visual/
-│           └── boards.visual.spec.js
+│           └── boards.visual.spec.ts
 ├── .env                            # Environment variables (Credentials, URLs)
 ├── .gitignore                      # Files and folders excluded from Git
 ├── eslint.config.mjs               # Linter rules configuration
