@@ -1,0 +1,31 @@
+{
+  "name": "trello-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint constants pages tests",
+    "pw": "npx playwright test",
+
+    "test:cards": "npm run pw -- tests/ui/cards/cards.spec.ts",
+    "test:visual": "npm run pw -- tests/ui/visual",
+    "test:generate_visual": "npm run pw -- tests/ui/visual --update-snapshots",
+    "test:api_spaces": "npm run pw -- tests/api/spaces/spaces.api.spec.ts",
+    "test:api_tasks": "npm run pw -- tests/api/tasks/tasks.api.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.2.1",
+    "eslint-plugin-playwright": "^2.10.2",
+    "globals": "^17.5.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.0"
+  }
+}
