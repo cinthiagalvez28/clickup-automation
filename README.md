@@ -1,7 +1,7 @@
   
 # QA-Challenge 
 
-Automation testing project using Playwright, JavaScript, and GitHub Actions.
+Automation testing project using Playwright and TypeScript.
 
 # 🛠️ Tech Stack
 
@@ -35,8 +35,8 @@ TODOIST-AUTOMATION/
 ├── services/                       # Page Object Model (POM) implementation
 │   └── clickup/                    # Reusable components (UI fragments)
 │       └── SideBar.ts
-│           ├── spaces.api.ts       # Board page logic
-│           └── tasks.api.ts        # ClickUp page logic
+│           ├── spaces.api.ts       # Spaces endpoints logic
+│           └── tasks.api.ts        # Tasks endpoints logic
 ├── tests/                          # Test scripts organized by modules
 │   ├── api/
 │   │   ├── spaces/
@@ -67,11 +67,13 @@ npm install
 ```
 4. To run this project, you will need to create a `.env` file in the root directory and add the following environment variables:
 ```bash
-BASE_URL= https://www.saucedemo.com/
-
-USERNAME= replace_username
-
-PASSWORD= replace_password
+BASE_URL=https://app.clickup.com
+USERNAME=username
+PASSWORD=password
+CLICKUP_TOKEN=clickup_token
+CLICKUP_API_BASE_URL=https://api.clickup.com/api/v2
+CLICKUP_TEAM_ID=clickup_teamid
+CLICKUP_LIST_ID=clickup_listid
 ```
 
 # 📦 Main Dependecies
@@ -79,29 +81,21 @@ PASSWORD= replace_password
 The following core libraries are required to run and manage this testing framework:
 - **@playwright/test**: Core execution framework.
 - **eslint** & **eslint-plugin-playwright**: Static code analysis and Playwright best practices.
-- **allure-playwright** & **allure-commandline**: Detailed HTML test reporting.
-- **faker.js**: Library that generates fake data for testing scenarios.
 
 # 🚀 Running Tests
 
 | Comando | Descripción |
 | :--- | :--- |
-| `npm run pw` | Motor base. |
-| `npm run test:smoke` | Run the most critical test scenarios. |
-| `npm run test:regression` | Run all the tests. |
-| `npm run test:login` | Run only Login tests. |
-| `npm run test:logout` | Run only Logout tests. |
-| `npm run test:products` | Run only Products tests. |
-| `npm run test:shopping_cart` | Run only Shopping Cart tests. |
-| `npm run test:your_information` | Run only Checkout: Your Information tests. |
-| `npm run test:overview` | Run only Checkout: Overview tests. |
-| `npm run test:checkout` | Run only Checkout: Complete tests. |
-| `npm run test:ui_states` | Run only UI_state tests. |
-| `npm run report` | Generate and open the last Allure report. |
+| `npm run pw` | Motor base. Run all the tests. |
+| `test:cards` | Run only cards tests. |
+| `test:generate_visual` | Generates the references for visual testing. |
+| `test:visual` | Run only the visual tests. |
+| `test:api_spaces` | Run only the spaces endpoint tests. |
+| `test:api_tasks` | Run only the tasks endpoint tests. |
 | `npm run lint` | Execute linter to verify the code quality. 
 
  ### 📊 Viewing Specific Historical Reports
-If you need to view a specific historical report, locate the folder name within the `allure-reports` directory and run the following command:
+To run report:
 ```bash
-npx allure open allure-reports/report_2026-04-20T15-33-07-659Z
+npx playwright show-report
 ```
