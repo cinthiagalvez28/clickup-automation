@@ -1,9 +1,10 @@
 import { test, expect } from '@playwright/test';
 import { ClickUpTasksApi } from '../../../services/clickup/tasks.api';
+import { API } from '../../../constants/TestData';
 
 test.describe.serial('Tasks API', () => {
 
-  const listId = process.env.CLICKUP_LIST_ID!;
+  const listId = API.CLICKUP_LIST_ID!;
 
   test('As a user, I want to retrieve my tasks', async ({ request }) => {
     const api = new ClickUpTasksApi(request);

@@ -1,10 +1,11 @@
 import { test, expect } from '@playwright/test';
 import { ClickUpSpacesApi } from '../../../services/clickup/spaces.api';
+import { API } from '../../../constants/TestData';
 
 test.describe.serial('Spaces API', () => {
 
   let spaceId: string;
-  const teamId = process.env.CLICKUP_TEAM_ID!;
+  const teamId = API.CLICKUP_TEAM_ID!;
 
   test.afterAll(async ({ request }) => {
     if (!spaceId) return;

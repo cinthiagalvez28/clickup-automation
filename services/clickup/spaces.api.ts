@@ -1,17 +1,18 @@
 import { APIRequestContext, APIResponse } from '@playwright/test';
+import { API } from '../../constants/TestData';
 
 export class ClickUpSpacesApi {
   constructor(private request: APIRequestContext) {}
 
   private get baseUrl() {
-    const url = process.env.CLICKUP_API_BASE_URL;
+    const url = API.CLICKUP_API_BASE_URL;
     if (!url) throw new Error('Missing CLICKUP_API_BASE_URL');
     return url;
   }
 
   private get headers() {
     return {
-      Authorization: process.env.CLICKUP_TOKEN!,
+      Authorization: API.CLICKUP_TOKEN!,
     };
   }
 

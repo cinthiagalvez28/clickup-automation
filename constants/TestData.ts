@@ -14,5 +14,12 @@ export const USERS = {
   PASSWORD: process.env.PASSWORD as string
 };
 
+export const API = {
+  CLICKUP_API_BASE_URL: process.env.CLICKUP_API_BASE_URL as string,
+  CLICKUP_TOKEN: process.env.CLICKUP_TOKEN as string,
+  CLICKUP_TEAM_ID: process.env.CLICKUP_TEAM_ID as string,
+  CLICKUP_LIST_ID: process.env.CLICKUP_LIST_ID as string
+};
+
 export const DEFAULT_TIMEOUT = 15000;
 export const EXTENDED_DEFAULT_TIMEOUT = 30000;
