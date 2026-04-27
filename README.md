@@ -34,9 +34,8 @@ TODOIST-AUTOMATION/
 │   └── LoginPage.ts                # Login page logic
 ├── services/                       # Page Object Model (POM) implementation
 │   └── clickup/                    # Reusable components (UI fragments)
-│       └── SideBar.ts
-│           ├── spaces.api.ts       # Spaces endpoints logic
-│           └── tasks.api.ts        # Tasks endpoints logic
+│       ├── spaces.api.ts           # Spaces endpoints logic
+│       └── tasks.api.ts            # Tasks endpoints logic
 ├── tests/                          # Test scripts organized by modules
 │   ├── api/
 │   │   ├── spaces/
