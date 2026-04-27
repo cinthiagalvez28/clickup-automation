@@ -19,7 +19,7 @@ Automation testing project using Playwright and TypeScript.
 # 📁 Project Structure
 
 ```bash
-TODOIST-AUTOMATION/
+CLICKUP-AUTOMATION/
 ├── .github/                        # GitHub specific configurations
 ├── auth/                           # Authentication and session management
 │   ├── auth.json                   # Stored session state (cookies/local storage - it is generated each execution)
