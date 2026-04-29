@@ -25,13 +25,13 @@ CLICKUP-AUTOMATION/
 │   ├── auth.json                   # Stored session state (cookies/local storage - it is generated each execution)
 │   └── auth.setup.ts               # Logic to reuse or create a new session)
 ├── constants/                      # Static values and test data configuration
-│   └── TestData.ts
+│   └── test-data.ts
 ├── pages/                          # Page Object Model (POM) implementation
 │   ├── component/                  # Reusable components (UI fragments)
-│   │   └── SideBar.ts
-│   ├── BoardPage.ts                # Board page logic
-│   ├── ClickUpPage.ts              # ClickUp page logic
-│   └── LoginPage.ts                # Login page logic
+│   │   └── side-bar.page.ts        # Side Bar page logic
+│   ├── board.page.ts               # Board page logic
+│   ├── click-up.page.ts            # ClickUp page logic
+│   └── login.page.ts               # Login page logic
 ├── services/                       # Page Object Model (POM) implementation
 │   └── clickup/                    # Reusable components (UI fragments)
 │       ├── spaces.api.ts           # Spaces endpoints logic

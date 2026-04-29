@@ -1,6 +1,6 @@
 import { Page, Locator } from '@playwright/test';
-import { SideBar } from './component/SideBar'
-import { ROUTES } from '../constants/TestData';
+import { SideBar } from './component/side-bar.page'
+import { ROUTES } from '../constants/test-data';
 
 export class BoardPage {
   readonly page: Page;

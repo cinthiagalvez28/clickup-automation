@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { test as setup, chromium } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
-import { BoardPage } from '../pages/BoardPage';
-import { USERS, DEFAULT_TIMEOUT } from '../constants/TestData';
+import { LoginPage } from '../pages/login.page';
+import { BoardPage } from '../pages/board.page';
+import { USERS, DEFAULT_TIMEOUT } from '../constants/test-data';
 
 const authPath = path.resolve('./auth/auth.json');
 

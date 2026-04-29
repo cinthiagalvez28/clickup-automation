@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { ClickUpTasksApi } from '../../../services/clickup/tasks.api';
-import { API } from '../../../constants/TestData';
+import { API } from '../../../constants/test-data';
 
 test.describe.serial('Tasks API', () => {
 

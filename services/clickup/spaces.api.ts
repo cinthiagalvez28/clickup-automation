@@ -1,5 +1,5 @@
 import { APIRequestContext, APIResponse } from '@playwright/test';
-import { API } from '../../constants/TestData';
+import { API } from '../../constants/test-data';
 
 export class ClickUpSpacesApi {
   constructor(private request: APIRequestContext) {}

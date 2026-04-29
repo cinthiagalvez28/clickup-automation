@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { BoardPage } from '../../../pages/BoardPage';
+import { BoardPage } from '../../../pages/board.page';
 import { ClickUpTasksApi } from '../../../services/clickup/tasks.api';
 
 test.describe('Cards\' tests', () => {

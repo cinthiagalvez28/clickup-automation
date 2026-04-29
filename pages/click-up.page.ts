@@ -1,5 +1,5 @@
 import { Page, Locator } from '@playwright/test';
-import { ROUTES } from '../constants/TestData';
+import { ROUTES } from '../constants/test-data';
 
 export class ClickUpPage {
   readonly page: Page;
